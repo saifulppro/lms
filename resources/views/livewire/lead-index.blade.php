@@ -36,5 +36,7 @@
             @endforeach
         </tbody>
     </table>
-
+    <div class="mt-4">
+        {{$leads->links()}}
+    </div>
 </div>
