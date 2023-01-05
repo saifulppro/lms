@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->text('image_url');
-            $table->string('user_id');
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
