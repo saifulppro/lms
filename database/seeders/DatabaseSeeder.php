@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->create_user_with_role('Super Admin', 'Super Admin', 'admin@admin.com');
         $this->create_user_with_role('Communications Manager', 'Communication Team', 'communication@admin.com');
         $teacher = $this->create_user_with_role('Teacher', 'Teacher', 'teacher@admin.com');
+        $this->create_user_with_role('leads', 'Lead', 'lead@admin.com');
 
 
 
@@ -43,7 +44,7 @@ class DatabaseSeeder extends Seeder
         Curriculum::factory()->count(10)->create();
 
     }
-    
+
     private function create_user_with_role($type, $name, $email){
         $role = Role::create([
             'name' => $type
