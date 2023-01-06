@@ -15,8 +15,9 @@ class LeadController extends Controller
     public function index()
     {
      
-        // permisions check
-        permission_check('lead-manager');
+        if(permission_check('lead-manager')){
+            return redirect()->route('dashboard');
+        }
         
         return view('lead.index');
 
@@ -63,7 +64,7 @@ class LeadController extends Controller
     public function edit($id)
     {
         return view('lead.edit',[
-            'lead_id' => $id
+            'lead_id' => $id,
         ]);
     }
 
