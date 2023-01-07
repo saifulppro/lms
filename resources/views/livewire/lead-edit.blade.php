@@ -24,7 +24,6 @@
                 @error('email')
                 <div class="text-red-500 text-sm">{{$message}}</div>
                 @enderror
-
             </div>
         </div>
         <div class="md:flex md:items-center mb-6">

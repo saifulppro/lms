@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
     {
 
         // for default permissions
-        $defaultparmissions = ['lead-manager', 'create-admin'];
+        $defaultparmissions = ['lead-manager', 'create-admin', 'user-management'];
 
         foreach($defaultparmissions as $permission){
             Permission::create(['name' => $permission]);
