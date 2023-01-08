@@ -46,6 +46,7 @@ class DatabaseSeeder extends Seeder
             'description' => 'laravel is a great way to create web applications and many more',
             'image_url' => 'https://laravel.com/img/logotype.min.svg',
             'user_id' => $teacher->id,
+            'price' => 500,
         ]); 
         
         // curriculum factory
