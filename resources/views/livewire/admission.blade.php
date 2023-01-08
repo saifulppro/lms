@@ -31,7 +31,7 @@
 
     @if(!empty($selectedCourse))
     <p class="mb-4">price: ${{number_format($selectedCourse->price, 2)}}</p>
-    <!-- <input wire:model.lazy="payment" type="number" step=".01" placeholder="payment" class="w-full"> -->
+    <input wire:model.lazy="payment" type="number" step=".01" placeholder="payment" max="{{number_format($selectedCourse->price)}}" class="w-full mb-4">
     
     <button type="submit" class="button mb-4">Enroll Course</button>
     @endif

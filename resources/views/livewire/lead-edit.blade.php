@@ -55,7 +55,7 @@
 
         @foreach($notes as $note)
         <div class="mb-4 w-48 p-2 border-b-2 border-indigo-500">
-            <h3>{{$note->description}}</h3>
+            <h3>{{$note->id}} - {{$note->description}}</h3>
         </div>
         @endforeach
 
